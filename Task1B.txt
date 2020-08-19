@@ -3,7 +3,7 @@ string=str(input())
 k=0
 
 while True:
-    if string[0:l//2]==string[l//2:]:
+    if string[0:l//2]==string[l//2:]:       # to make exact half string , I did splicing
        k=k+1
        string=string[:l//2]
        l=l//2
