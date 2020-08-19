@@ -1,0 +1,23 @@
+Val= list(map(int, input().split()))
+n=Val[0]
+r=Val[1]
+x=Val[2]
+y=Val[3] 
+input_c=input()
+c_list=input_c.split()
+input_s=input()
+s_list=input_s.split()
+nr=r
+for match in c_list:
+    if match=='1':
+        for scn in s_list:
+            if scn=='1':
+                nr=nr+x
+            else:
+                nr=nr-x
+if nr>r:
+    print("promoted")
+elif r>nr:
+    print("demoted")
+else:
+    print("no change")

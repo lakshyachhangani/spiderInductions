@@ -1,0 +1,12 @@
+l=int(input())
+string=str(input())
+k=0
+
+while True:
+    if string[0:l//2]==string[l//2:]:
+       k=k+1
+       string=string[:l//2]
+       l=l//2
+    else:
+        print(k)
+        break
