@@ -1,16 +1,16 @@
 import math
 l=int(input())
 n=str(input())
-n=int(n,2)
-a=math.floor(math.log(n,2))+1
-if n<(2**a -1)and n>(2**(a-1)) :
+n=int(n,2)  #this is used for coverting binaru into integer 
+a=math.floor(math.log(n,2))+1           #this is for finding that how much is the power on 2 when used log so that I can use it to limit the cases
+if n<(2**a -1)and n>(2**(a-1)) :     
     n1=bin(n+1)
     n2=bin(n-1)
-    print(n2[2:],n1[2:],end=' ' )
-elif n==2**(a-1):
+    print(n2[2:],n1[2:],end=' ' )     
+elif n==2**(a-1):                  
     n1=bin(n-1)
     n2=bin(n+1)
     print("0"+n1[2:],n2[2:],end=' ' )
-else:
+else:                                               # only cases like 2^n -1 wont work  
     print(-1)
     
