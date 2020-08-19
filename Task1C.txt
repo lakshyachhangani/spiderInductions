@@ -5,8 +5,8 @@ q1=1
 q2=1
 for i in range(6):
     if (q1 and query[0]%arr[i]==0 and query[1]%arr[i]==0):
-        q1=0
-        res.append(arr[i])
+        q1=0                                                            # This q1 is used so that once the is is used it wont be used another time as its work is done 
+        res.append(arr[i])                                              # Once we find arr[i] there is no need for if 
         res.append(query[0]//arr[i])
         res.append(query[1]//arr[i])
 
